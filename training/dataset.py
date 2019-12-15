@@ -68,6 +68,7 @@ class TFRecordDataset:
 
         # List tfrecords files and inspect their shapes.
         assert os.path.isdir(self.tfrecord_dir)
+        print(self.tfrecord_dir)
         tfr_files = sorted(glob.glob(os.path.join(self.tfrecord_dir, '*.tfrecords')))
         assert len(tfr_files) >= 1
         tfr_shapes = []
